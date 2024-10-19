@@ -31,6 +31,6 @@ export default class FilmsPresenter {
 
     render(this.filmButtonMoreComponent, this.filmListComponent.getElement());
 
-    render(new FilmDetailsView(), this.container.parentElement());
+    render(new FilmDetailsView(), this.container.parentElement);
   };
 }
