@@ -17,8 +17,10 @@ export default class FilmsPresenter {
   filmListContainerComponent = new FilmListContainerView();
   filmButtonMoreComponent = new FilmButtonMoreView();
 
-  init = (container) => {
+  init = (container, filmsModel) => {
     this.container = container;
+    this.filmsModel = filmsModel;
+    this.boardFilms = [...this.filmsModel.getFilms()];
 
     render(this.sortComponent, this.container);
     render(this.filmsComponent, this.container);
