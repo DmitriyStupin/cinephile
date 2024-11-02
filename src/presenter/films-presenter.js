@@ -22,6 +22,7 @@ export default class FilmsPresenter {
     this.filmsModel = filmsModel;
     this.boardFilms = [...this.filmsModel.getFilms()];
 
+
     render(this.sortComponent, this.container);
     render(this.filmsComponent, this.container);
     render(this.filmListComponent, this.filmsComponent.getElement());

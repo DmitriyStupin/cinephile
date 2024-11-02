@@ -1,14 +1,18 @@
 import { getRandomInteger } from '../utils';
 
-const titles = [
-  'Country On Him',
-  'Raiders With The Carpet',
-  'Guest Who Sold The Darkness',
-  'The Great Flamarion'
-];
+const generateTitle = () => {
+  const titles = [
+    'Country On Him',
+    'Raiders With The Carpet',
+    'Guest Who Sold The Darkness',
+    'The Great Flamarion'
+  ];
+  const randomIndex = getRandomInteger(0, titles.length - 1);
+  return titles[randomIndex];
+};
 
 export const generateFilm = () => ({
-  title: getRandomInteger(titles),
+  title: generateTitle(),
   alternativeTitle: 'Laziness Who Sold Themselves',
   totalRating: 5.3,
   poster: 'images/posters/blue-blazes.jpg',
